@@ -1,0 +1,79 @@
+<div id="portfolio-projects" aria-label="Animated portfolio page">
+  <canvas aria-hidden="true"></canvas>
+  <nav aria-label="Portfolio navigation"><a href="#" data-placeholder>Home</a><span aria-current="page">Portfolio</span><a href="#" data-placeholder>Experience</a><a href="#" data-placeholder>About</a></nav>
+  <header><p class="pp-eyebrow">SELECTED WORK</p><h1>Projects</h1></header>
+  <div class="pp-launch" aria-hidden="true"><span></span></div>
+  <div class="pp-grid">
+    <article style="--delay:.5s;--origin:180px">
+      <a class="pp-project-title" href="https://github.com/tserd-io/model-bridge" target="_blank" rel="noopener noreferrer" aria-label="Model Bridge on GitHub"><span>Model Bridge</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+      <div class="pp-details"><p class="pp-destination">GITHUB · LLM GATEWAY</p><p>A single Python API for local and hosted language models. FastAPI routes requests to Ollama or OpenAI and returns consistent responses with model, latency, and usage information.</p><div class="pp-rule"></div><p class="pp-label">ENGINEERING HIGHLIGHTS</p><p>Timeouts, bounded retries, optional provider fallback, and SQLite request tracking. Structured logs and Prometheus metrics support observability; a versioned evaluation runner measures quality, latency, availability, and available cost estimates.</p><p class="pp-skills">Python <span>·</span> FastAPI <span>·</span> SQLite<br>Ollama <span>·</span> OpenAI <span>·</span> Prometheus</p></div>
+    </article>
+    <article style="--delay:1s;--origin:0px">
+      <a class="pp-project-title" href="https://github.com/tserd-io/regulated-document-agent" target="_blank" rel="noopener noreferrer" aria-label="Regulated Document Agent on GitHub"><span>Regulated Document Agent</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+      <div class="pp-details"><p class="pp-destination">GITHUB · DOCUMENT WORKFLOWS</p><p>A reference application for accountable document processing: text extraction, context retrieval, structured fields, business-rule validation, confidence scoring, and routing to approval, human review, or rejection.</p><div class="pp-rule"></div><p class="pp-label">ENGINEERING HIGHLIGHTS</p><p>FastAPI powers the workflow and review interface, with SQLite persistence and audit events. Runs locally with deterministic extraction and synthetic samples; supports an optional live OpenAI extractor and includes workflow tests and operational metrics.</p><p class="pp-skills">Python <span>·</span> FastAPI <span>·</span> SQLite<br>OpenAI <span>·</span> Human review <span>·</span> Audit logging</p></div>
+    </article>
+    <article style="--delay:1.5s;--origin:-180px">
+      <a class="pp-project-title" href="https://github.com/tserd-io/AtlasMart" target="_blank" rel="noopener noreferrer" aria-label="AtlasMart on GitHub"><span>AtlasMart</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+      <div class="pp-details"><p class="pp-destination">GITHUB · GOVERNED DATA PLATFORM</p><p>A governed data platform reference implementation covering the full path from raw source ingestion to trusted analytics products, with ingestion contracts, orchestration, and lakehouse-style staging layers.</p><div class="pp-rule"></div><p class="pp-label">ENGINEERING HIGHLIGHTS</p><p>dbt-style transformations and dimensional marts backed by data quality gates, lineage, and metadata documentation. PII controls, freshness SLAs, and operational observability support trustworthy downstream analytics.</p><p class="pp-skills">Data lakehouse <span>·</span> Dimensional modeling<br>Data quality <span>·</span> Lineage <span>·</span> PII controls</p></div>
+    </article>
+  </div>
+  <footer><span class="pp-status" role="status"></span><button type="button" class="pp-replay">Replay entrance</button></footer>
+</div>
+<style>
+#portfolio-projects{--pp-ink:#090f19;--pp-white:#eef1f5;--pp-muted:#b1bdcb;--pp-blue:#356fe8;--pp-green:#5bde5b;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 2% 85%,rgba(53,111,232,.24),transparent 55%),radial-gradient(ellipse at 100% 80%,rgba(91,222,91,.12),transparent 48%),var(--pp-ink);color:var(--pp-white);font-family:Arial,Helvetica,sans-serif;min-height:650px}
+#portfolio-projects canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#portfolio-projects nav,#portfolio-projects header,#portfolio-projects .pp-grid,#portfolio-projects footer{position:relative;z-index:10}
+#portfolio-projects nav{display:flex;justify-content:center;gap:28px;padding:29px 95px 0;font-size:12px}
+#portfolio-projects nav a{color:var(--pp-muted);text-decoration:none}#portfolio-projects nav span{color:var(--pp-white)}
+#portfolio-projects header{text-align:center;padding:43px 20px 0}
+#portfolio-projects .pp-eyebrow{font-size:11px;letter-spacing:3px;color:var(--pp-muted);margin:0 0 12px}
+#portfolio-projects h1{font-size:clamp(45px,7vw,68px);font-weight:400;letter-spacing:-2px;margin:0}
+#portfolio-projects .pp-subtitle{font-size:15px;color:var(--pp-muted);margin:16px 0 0}
+#portfolio-projects .pp-launch{position:relative;z-index:1;height:64px;display:flex;justify-content:center;overflow:hidden}
+#portfolio-projects .pp-launch span{width:1px;background:linear-gradient(transparent,rgba(53,111,232,.6),transparent);height:64px;animation:pp-pulse 2.4s ease-out both}
+#portfolio-projects .pp-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:44px;padding:0 45px 65px}
+#portfolio-projects article{min-width:0}
+#portfolio-projects .pp-project-title{display:flex;gap:9px;align-items:center;font-size:24px;letter-spacing:-.5px;color:var(--pp-white);text-decoration:none;animation:pp-send .85s cubic-bezier(.18,.75,.2,1) var(--delay) both;min-height:40px}
+#portfolio-projects .pp-project-title:hover{color:var(--pp-green)}
+#portfolio-projects .pp-project-title i,#portfolio-projects .pp-project-title svg{width:17px;height:17px;flex-shrink:0;color:var(--pp-green)}
+#portfolio-projects .pp-details{animation:pp-reveal 1s ease calc(var(--delay) + .65s) both}
+#portfolio-projects .pp-details p{font-size:14px;line-height:1.7;color:var(--pp-muted);margin:12px 0}
+#portfolio-projects .pp-details .pp-destination{font-size:10px;letter-spacing:1.3px;color:#90a9d2;margin:9px 0 22px}
+#portfolio-projects .pp-rule{height:1px;background:linear-gradient(90deg,#344259,transparent);margin:23px 0}
+#portfolio-projects .pp-details .pp-label{font-size:10px;letter-spacing:1.6px;color:var(--pp-white)}
+#portfolio-projects .pp-details .pp-skills{font-size:12px;color:#91bd9c;margin-top:23px}#portfolio-projects .pp-skills span{padding:0 5px}
+#portfolio-projects footer{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap;padding:0 22px 20px}
+#portfolio-projects footer button{background:rgba(9,15,25,.8);border:1px solid #46566e;color:var(--pp-muted);padding:10px 12px;border-radius:5px;font:12px Arial}
+#portfolio-projects .pp-status{font-size:12px;color:var(--pp-muted);margin-right:auto}
+@keyframes pp-send{from{opacity:0;transform:translate(var(--origin),-44px) scale(.9);filter:blur(6px)}to{opacity:1;transform:translate(0,0) scale(1);filter:blur(0)}}
+@keyframes pp-reveal{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pp-pulse{from{opacity:0;transform:scaleY(0);transform-origin:top}35%{opacity:1}to{opacity:.3;transform:scaleY(1)}}
+@media(max-width:650px){#portfolio-projects nav{padding:26px 16px 0;gap:23px}#portfolio-projects .pp-grid{grid-template-columns:1fr;gap:40px;padding:0 28px 45px}#portfolio-projects article{--origin:0px!important}#portfolio-projects .pp-details .pp-destination{margin-bottom:15px}#portfolio-projects .pp-launch{height:40px}#portfolio-projects footer{justify-content:center}#portfolio-projects .pp-status{width:100%;text-align:center}}
+@media(prefers-reduced-motion:reduce){#portfolio-projects .pp-project-title,#portfolio-projects .pp-details,#portfolio-projects .pp-launch span{animation:none}}
+</style>
+<script>
+(()=>{
+const root=document.getElementById('portfolio-projects'),canvas=root.querySelector('canvas'),ctx=canvas.getContext('2d');const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;let moving=!reduced,w=0,h=0,t=0,last=0;
+const pause=(root.querySelector('.pp-pause')||document.createElement('button'));pause.textContent=moving?'Pause background':'Play background';pause.setAttribute('aria-pressed',String(!moving));pause.addEventListener('click',()=>{moving=!moving;pause.textContent=moving?'Pause background':'Play background';pause.setAttribute('aria-pressed',String(!moving))});
+root.querySelector('.pp-replay').addEventListener('click',()=>{const elements=root.querySelectorAll('.pp-project-title,.pp-details,.pp-launch span');elements.forEach(el=>el.style.animation='none');void root.offsetWidth;elements.forEach(el=>el.style.animation='')});
+root.querySelectorAll('[data-placeholder]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();root.querySelector('.pp-status').textContent='Preview link — add your project URL.'}));
+new ResizeObserver(()=>{w=root.clientWidth;h=root.clientHeight;const d=Math.min(devicePixelRatio||1,2);canvas.width=w*d;canvas.height=h*d;ctx.setTransform(d,0,0,d,0,0)}).observe(root);
+function frame(now){const dt=last?Math.min((now-last)/1000,.05):0;last=now;if(moving)t+=dt;ctx.clearRect(0,0,w,h);
+for(let i=0;i<75;i++){const a=Math.sin(i*127.1+19)*43758.54,b=Math.sin(i*311.7+37)*19341.7;const x=((a-Math.floor(a))*w+t*.16)%w,y=(b-Math.floor(b))*h;ctx.fillStyle=`rgba(220,231,246,${(.1+.1*Math.sin(t*.3+i))})`;ctx.beginPath();ctx.arc(x,y,i%13===0?1.2:.65,0,Math.PI*2);ctx.fill()}
+const fragments=['import pandas as pd','model.fit(X_train, y_train)','df.drop_duplicates()','loss.backward()','predict(X_test)','cross_val_score(model, X, y)','SELECT * FROM observations','np.mean(scores)','optimizer.step()','features.transform(X)','train_test_split(X, y)','plt.savefig("results.png")'];
+ctx.save();ctx.font='11px monospace';ctx.textBaseline='middle';
+for(let i=0;i<7;i++){
+const y=h*(.25+i*.12)+Math.sin(t*.12)*7;const color=i%3===0?'91,222,91':'53,111,232';
+ctx.strokeStyle=`rgba(${color},.045)`;ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(0,y-w*.07);ctx.lineTo(w,y+w*.07);ctx.stroke();
+for(let packet=0;packet<2;packet++){
+const track=w+300;const x=((t*(13+i%3*4)+i*133+packet*track/2)%track)-170;const py=y+(x-w*.5)*.14;
+const quiet=x>w*.08&&x<w*.92&&py<h*.88?.5:1;
+ctx.save();ctx.translate(x,py);ctx.rotate(Math.atan(.14));ctx.fillStyle=`rgba(${color},${.19*quiet})`;ctx.fillText(fragments[(i+packet*5)%fragments.length],0,-8);
+ctx.fillStyle=`rgba(${color},${.3*quiet})`;ctx.fillRect(-8,-1,3,3);ctx.restore();
+}
+}ctx.restore();
+requestAnimationFrame(frame)}requestAnimationFrame(frame);
+})();
+</script>
+
+

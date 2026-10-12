@@ -1,0 +1,26 @@
+<div id="portfolio-suite" aria-label="Thomas Serdioukov website">
+<section data-suite-page="home">__HOME__</section>
+<section data-suite-page="portfolio" hidden>__PORTFOLIO__</section>
+<section data-suite-page="experience" hidden>__EXPERIENCE__</section>
+<section data-suite-page="about" hidden>__ABOUT__</section>
+</div>
+<style>
+#portfolio-suite [hidden]{display:none!important}
+#portfolio-suite nav a{color:#a8b8ca;text-decoration:none;padding:5px 0}
+#portfolio-suite nav a[aria-current="page"]{color:#eef1f5}
+#portfolio-suite nav a:hover{color:#91d59c}
+#portfolio-suite .mp-links a{color:inherit;text-decoration:none}
+#portfolio-suite .mp-links a:hover{text-decoration:underline;text-underline-offset:4px}
+#portfolio-suite .mp-page{min-height:680px}
+</style>
+<script>
+(()=>{
+const suite=document.getElementById('portfolio-suite');
+const pages=Array.from(suite.querySelectorAll('[data-suite-page]'));
+function show(name){if(!pages.some(page=>page.dataset.suitePage===name))return;pages.forEach(page=>{page.hidden=page.dataset.suitePage!==name});suite.querySelectorAll('nav [data-page]').forEach(link=>{if(link.dataset.page===name)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')});}
+suite.addEventListener('click',event=>{const link=event.target.closest('[data-page]');if(!link||!suite.contains(link))return;event.preventDefault();show(link.dataset.page);});
+show('home');
+})();
+</script>
+
+

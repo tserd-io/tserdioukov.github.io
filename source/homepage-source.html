@@ -1,0 +1,190 @@
+<div id="motion-portfolio" aria-label="Portfolio homepage">
+  <section data-variant="Parallel code streams" aria-label="Parallel code streams animated homepage">
+    <div class="mp-page" data-mode="code-lines" data-accent="#356FE8" data-rgb="53,111,232" data-secondary="91,222,91" style="--mp-accent:#356FE8;--mp-glow:rgba(53,111,232,.38);--mp-second-glow:rgba(91,222,91,.16)">
+      <canvas aria-hidden="true"></canvas><div class="mp-haze" aria-hidden="true"></div>
+      <nav aria-label="Preview navigation"><span>Portfolio</span><span>Experience</span><span>About</span></nav>
+      <main><h1 class="mp-animated-name">THOMAS SERDIOUKOV</h1><p class="mp-title">Senior AI &amp; Data Platform Engineer</p><p class="mp-degree">MsEng Interdisciplinary AI · BA Financial Mathematics</p><div class="mp-actions"><button type="button" class="mp-primary">View portfolio</button><button type="button">View resume</button></div><div class="mp-links"><a href="https://www.linkedin.com/in/thomas-serd" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/tserd-io" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:tom.serd@gmail.com">tom.serd@gmail.com</a></div></main>
+      
+    </div>
+  </section>
+
+
+
+  
+</div>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Manrope:wght@500&family=Space+Grotesk:wght@500&family=Syne:wght@500&display=swap");
+#motion-portfolio .mp-page{position:relative;isolation:isolate;overflow:hidden;min-height:560px;background:#090F19;color:#EEF1F5;font-family:Arial,Helvetica,sans-serif;text-align:center}
+#motion-portfolio .mp-amber{background:#111214}
+#motion-portfolio .mp-page[data-mode="clouds"]{background:radial-gradient(ellipse at 50% 10%,#101925,#080e17 70%)}
+#motion-portfolio canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+#motion-portfolio .mp-haze{position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 8% 73%,var(--mp-glow),transparent 48%),radial-gradient(ellipse at 96% 74%,var(--mp-second-glow,rgba(151,166,182,.2)),transparent 43%);animation:mp-breathe 14s ease-in-out infinite alternate}
+#motion-portfolio nav{position:relative;z-index:20;display:flex;justify-content:center;gap:34px;padding:33px 95px 0;font-size:13px;color:#d2d9e3}
+#motion-portfolio main{position:relative;z-index:20;padding:54px 20px 140px}
+#motion-portfolio h1{font-family:var(--mp-name-font,Syne),Helvetica,sans-serif;font-size:clamp(30px,5.2vw,58px);font-weight:500;letter-spacing:.055em;line-height:1.15;text-wrap:balance;margin:0 0 18px}
+#motion-portfolio p{margin:0;font-weight:400}
+#motion-portfolio .mp-title{font-size:17px;letter-spacing:.3px;color:#d1d9e4}
+#motion-portfolio .mp-specialty{font-size:12px;color:#aebed2;margin-top:12px;line-height:1.6}
+#motion-portfolio .mp-links a{color:inherit;text-decoration:none}#motion-portfolio .mp-links a:hover{text-decoration:underline;text-underline-offset:4px}
+#motion-portfolio .mp-links{flex-wrap:wrap;padding:0 15px}
+#motion-portfolio .mp-degree{font-size:12px;margin-top:9px;color:#b5c0cc}
+#motion-portfolio .mp-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:32px}
+#motion-portfolio .mp-actions button{padding:13px 22px;border:1px solid #8f9baa;border-radius:6px;background:rgba(10,14,20,.55);color:#EEF1F5;font-size:13px;font-family:inherit;min-width:145px}
+#motion-portfolio .mp-actions .mp-primary{background:var(--mp-accent);border-color:var(--mp-accent);box-shadow:0 0 25px var(--mp-glow)}
+#motion-portfolio .mp-amber .mp-primary{color:#FFFFFF}
+#motion-portfolio .mp-links{display:flex;justify-content:center;gap:29px;margin-top:29px;font-size:12px;color:#d2d9e3}
+#motion-portfolio .mp-pause{position:absolute;z-index:30;bottom:19px;right:20px;background:rgba(10,14,20,.5);color:#b9c4cf;border:1px solid #52606d;border-radius:5px;padding:9px 12px;font:12px Arial}
+#motion-portfolio .mp-paused .mp-haze{animation-play-state:paused}
+#motion-portfolio .mp-animated-name{animation:none;text-shadow:0 0 8px rgba(174,202,255,.5),0 0 24px rgba(83,139,255,.48),0 0 48px rgba(53,111,232,.36),0 0 80px rgba(53,111,232,.22)}
+#motion-portfolio .mp-paused .mp-animated-name{animation-play-state:paused}
+@keyframes mp-text-breathe{from{text-shadow:0 0 8px rgba(53,111,232,.12),0 0 22px rgba(53,111,232,.07)}to{text-shadow:0 0 13px rgba(110,154,240,.3),0 0 36px rgba(53,111,232,.2),0 0 58px rgba(91,222,91,.06)}}
+@media(prefers-reduced-motion:reduce){#motion-portfolio .mp-animated-name{animation:none;text-shadow:0 0 8px rgba(174,202,255,.5),0 0 24px rgba(83,139,255,.48),0 0 48px rgba(53,111,232,.36),0 0 80px rgba(53,111,232,.22)}}
+@keyframes mp-breathe{from{opacity:.55;transform:scale(1)}to{opacity:1;transform:scale(1.12) translateY(-12px)}}
+@media(max-width:480px){#motion-portfolio nav{padding:28px 15px 0;gap:26px}#motion-portfolio .mp-page{min-height:560px}#motion-portfolio main{padding-top:62px}#motion-portfolio h1{letter-spacing:.055em}}
+@media(prefers-reduced-motion:reduce){#motion-portfolio .mp-haze{animation:none}}
+#motion-portfolio .mp-desk-page{min-height:730px}
+#motion-portfolio .mp-desk-page main{padding-top:35px;padding-bottom:360px}
+#motion-portfolio .mp-desk-page h1{font-size:76px}
+#motion-portfolio .mp-desk-scene{position:absolute;z-index:1;bottom:46px;left:4%;width:min(690px,88%);height:300px;pointer-events:none}
+#motion-portfolio .mp-tabletop{position:absolute;bottom:46px;left:0;right:0;height:31px;border-radius:5px;background:repeating-linear-gradient(1deg,transparent 0 3px,rgba(15,10,8,.12) 4px 5px),linear-gradient(#776654 0%,#594b3e 35%,#342d27 39%,#302923 100%);box-shadow:0 20px 45px #03060c,inset 0 1px 0 #958372;z-index:2}
+#motion-portfolio .mp-leg{position:absolute;bottom:0;width:13px;height:48px;background:#253045;z-index:3}
+#motion-portfolio .mp-left-leg{left:30px;transform:skew(-8deg)}#motion-portfolio .mp-right-leg{right:30px;transform:skew(8deg)}
+#motion-portfolio .mp-laptop{position:absolute;width:56%;left:8%;bottom:77px;height:222px;z-index:3;transform:perspective(950px) rotateY(7deg) rotateZ(-1deg);filter:drop-shadow(10px 11px 8px rgba(0,0,0,.5))}
+#motion-portfolio .mp-screen{position:absolute;inset:0 7% 28px;border:8px solid #323e54;border-radius:13px 13px 6px 6px;background:#080e18;box-shadow:0 0 40px rgba(53,111,232,.16);overflow:hidden;text-align:left;transform:perspective(800px) rotateX(-5deg)}
+#motion-portfolio .mp-terminal-top{display:flex;justify-content:space-between;padding:9px 9px;border-bottom:1px solid #253047;font:10px monospace;color:#8c9ab1}
+#motion-portfolio .mp-terminal-top span:first-child{color:#5bde5b;letter-spacing:2px}
+#motion-portfolio .mp-code{margin:10px;font:11px/1.65 monospace;color:#9ae39c;white-space:pre-wrap;overflow:hidden;height:125px}
+#motion-portfolio .mp-screen-glow{position:absolute;inset:0;background:linear-gradient(120deg,rgba(53,111,232,.08),transparent);pointer-events:none}
+#motion-portfolio .mp-keyboard{position:absolute;bottom:7px;left:0;right:0;height:29px;background:repeating-linear-gradient(90deg,#35415a 0 12px,#26334c 12px 14px);transform:perspective(200px) rotateX(35deg);border:7px solid #424f66;border-radius:3px}
+#motion-portfolio .mp-laptop-base{position:absolute;bottom:0;left:-2%;right:-2%;height:9px;background:#65748a;border-radius:2px 2px 12px 12px}
+#motion-portfolio .mp-plant{position:absolute;bottom:77px;left:1%;width:50px;height:120px;z-index:3;filter:drop-shadow(5px 5px 4px rgba(0,0,0,.35))}
+#motion-portfolio .mp-pot{position:absolute;bottom:0;width:44px;height:43px;background:linear-gradient(90deg,#697184,#939aab);border-radius:4px 4px 13px 13px}
+#motion-portfolio .mp-leaf{position:absolute;width:19px;height:55px;border-radius:90% 0 90% 0;background:#3da665;bottom:31px;left:17px;transform-origin:bottom;animation:mp-leaf 8s ease-in-out infinite alternate}
+#motion-portfolio .mp-l1{transform:rotate(-35deg)}#motion-portfolio .mp-l2{transform:rotate(25deg);height:71px;background:#5dc578}#motion-portfolio .mp-l3{transform:rotate(65deg);height:48px;background:#27854c}
+#motion-portfolio .mp-cup{position:absolute;bottom:83px;right:22%;width:46px;height:49px;border-radius:5px 5px 17px 17px;background:linear-gradient(90deg,#88929d,#d3d9dd 40%,#a8b1ba 72%,#687581);box-shadow:4px 8px 10px rgba(0,0,0,.5),inset 0 -4px 3px rgba(0,0,0,.2);z-index:3}
+#motion-portfolio .mp-cup:before{content:'';position:absolute;left:1px;right:1px;top:-5px;height:12px;border:3px solid #c9d0d6;border-radius:50%;background:radial-gradient(ellipse,#423023,#1e1611);box-sizing:border-box}
+#motion-portfolio .mp-cup:after{content:'';position:absolute;right:-17px;top:8px;width:17px;height:24px;border:5px solid #a6b0ba;border-left:0;border-radius:0 12px 12px 0;box-shadow:3px 2px 3px rgba(0,0,0,.25)}
+#motion-portfolio .mp-steam{position:absolute;top:-44px;left:12px;width:13px;height:38px;border-left:2px solid #97a6b6;border-radius:50%;filter:blur(2px);animation:mp-steam 4s ease-in-out infinite}
+#motion-portfolio .mp-steam-second{left:27px;top:-48px;animation-delay:-2s;animation-duration:5s;opacity:.2}
+#motion-portfolio .mp-notebook{position:absolute;bottom:78px;right:3%;width:99px;height:53px;background:linear-gradient(90deg,#202c38 0 7px,#526476 8px 10px,#344554 11px);border-bottom:5px solid #c1beb5;border-right:2px solid #667887;border-radius:3px;transform:perspective(300px) rotateX(48deg) rotateZ(-8deg);box-shadow:5px 8px 8px rgba(0,0,0,.5);z-index:3}
+#motion-portfolio .mp-notebook:after{content:'';position:absolute;right:14px;top:0;bottom:0;width:3px;background:#1c252e}
+#motion-portfolio .mp-pen{position:absolute;bottom:97px;right:6%;width:73px;height:5px;border-radius:3px;background:linear-gradient(#c4cdd3 0 25%,#26333e 26% 72%,#83939e 73%);transform:rotate(-18deg);box-shadow:2px 3px 3px rgba(0,0,0,.5);z-index:4}
+#motion-portfolio .mp-pen:before{content:'';position:absolute;left:-7px;border-right:8px solid #b1b8bd;border-top:2px solid transparent;border-bottom:2px solid transparent}
+@keyframes mp-steam{0%{opacity:0;transform:translateY(8px)}50%{opacity:.4}100%{opacity:0;transform:translateY(-15px)}}
+@keyframes mp-leaf{to{translate:2px 0}}
+#motion-portfolio .mp-paused .mp-leaf,#motion-portfolio .mp-paused .mp-steam{animation-play-state:paused}
+@media(max-width:480px){#motion-portfolio .mp-desk-page{min-height:710px}#motion-portfolio .mp-desk-scene{height:260px;left:3%;width:94%}#motion-portfolio .mp-laptop{width:66%;left:0;height:205px}#motion-portfolio .mp-plant{display:none}#motion-portfolio .mp-cup{right:10%;bottom:104px;width:33px;height:35px}#motion-portfolio .mp-notebook{width:66px;height:37px;right:2%}#motion-portfolio .mp-pen{width:47px;right:5%;bottom:91px}#motion-portfolio .mp-code{font-size:10px}#motion-portfolio .mp-terminal-top{font-size:9px}}
+@media(prefers-reduced-motion:reduce){#motion-portfolio .mp-leaf,#motion-portfolio .mp-steam{animation:none}}
+#motion-portfolio .mp-desk-page canvas,#motion-portfolio .mp-desk-page .mp-haze{display:none}
+#motion-portfolio .mp-desk-page nav{padding-top:22px;font-size:12px}
+#motion-portfolio .mp-desk-page main{padding:22px 20px 0}
+#motion-portfolio .mp-desk-page h1{font-size:clamp(42px,7vw,70px);margin-bottom:10px}
+#motion-portfolio .mp-desk-page .mp-title{font-size:18px}
+#motion-portfolio .mp-desk-page .mp-degree{font-size:13px;margin-top:6px}
+#motion-portfolio .mp-desk-page .mp-actions{margin-top:20px}
+#motion-portfolio .mp-desk-page .mp-actions button{padding:10px 18px}
+#motion-portfolio .mp-desk-page .mp-links{margin-top:17px}
+#motion-portfolio .mp-desk-page .mp-desk-scene{inset:0;width:100%;height:100%;transform:none}
+#motion-portfolio .mp-desk-page .mp-laptop{left:13%;top:52%;width:18.7%;height:21.2%;bottom:auto;transform:none;filter:none}
+#motion-portfolio .mp-desk-page .mp-screen{inset:0;border:0;border-radius:0;background:transparent;box-shadow:none;transform:skewX(3deg);opacity:.92}
+#motion-portfolio .mp-desk-page .mp-terminal-top{font-size:7px;padding:4px 5px}
+#motion-portfolio .mp-desk-page .mp-code{font-size:clamp(6px,.9vw,10px);line-height:1.5;margin:5px;height:calc(100% - 28px);color:#a7d5b1}
+#motion-portfolio .mp-desk-page .mp-screen-glow{display:none}
+#motion-portfolio .mp-desk-page .mp-keyboard,#motion-portfolio .mp-desk-page .mp-laptop-base,#motion-portfolio .mp-desk-page .mp-tabletop,#motion-portfolio .mp-desk-page .mp-leg,#motion-portfolio .mp-desk-page .mp-notebook,#motion-portfolio .mp-desk-page .mp-pen,#motion-portfolio .mp-desk-page .mp-plant{display:none}
+#motion-portfolio .mp-desk-page .mp-cup{left:46.1%;top:66.5%;width:2%;height:4%;bottom:auto;right:auto;background:none;box-shadow:none}
+#motion-portfolio .mp-desk-page .mp-cup:before,#motion-portfolio .mp-desk-page .mp-cup:after{display:none}
+#motion-portfolio .mp-desk-page .mp-steam{top:-40px;height:42px;width:17px;border-color:#d4dce2;filter:blur(2px);animation:mp-office-steam 4.5s ease-in-out infinite}
+@keyframes mp-office-steam{0%{opacity:0;transform:translate(0,10px) scaleX(.7)}25%{opacity:.38}60%{opacity:.3;transform:translate(-5px,-12px) scaleX(1.2)}100%{opacity:0;transform:translate(8px,-30px) scaleX(1.5)}}
+#motion-portfolio .mp-desk-page .mp-steam-second{left:25px;animation-delay:-2.2s;animation-duration:5.2s}
+#motion-portfolio .mp-desk-page.mp-paused .mp-steam{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){#motion-portfolio .mp-desk-page .mp-steam{animation:none}}
+@media(max-width:580px){#motion-portfolio .mp-desk-page{aspect-ratio:auto;min-height:680px;background-size:auto 100%;background-position:25% center}#motion-portfolio .mp-desk-page main{padding-top:30px}#motion-portfolio .mp-desk-page .mp-desk-scene{display:none}#motion-portfolio .mp-desk-page h1{font-size:60px}}
+</style>
+<script>
+(()=>{
+const root=document.getElementById('motion-portfolio');
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+root.querySelectorAll('.mp-page').forEach(page=>{
+const canvas=page.querySelector('canvas'),ctx=canvas.getContext('2d'),pause=(page.querySelector('.mp-pause')||document.createElement('button'));
+const state={moving:!reduced,speed:1,intensity:.8};let width=0,height=0,time=0,last=0;
+const code=page.querySelector('.mp-code');
+const snippets=[
+'# Explore a dataset\nimport pandas as pd\ndf = pd.read_csv("observations.csv")\nprint(df.shape)\nprint(df.describe().round(2))\nprint(df.isna().sum())\n\n✓ Data profile generated',
+'# Clean and engineer features\ndf = df.drop_duplicates()\ndf["date"] = pd.to_datetime(df.date)\ndf["month"] = df.date.dt.month\nX = df.drop(columns=["target", "date"])\ny = df["target"]\n\n✓ Features prepared',
+'# Split training and test data\nfrom sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2,\n    stratify=y, random_state=42)\n\n✓ Holdout set ready',
+'# Build a preprocessing pipeline\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.ensemble import RandomForestClassifier\nmodel = make_pipeline(SimpleImputer(),\n    RandomForestClassifier(random_state=42))\nmodel.fit(X_train, y_train)\n✓ Model fitted',
+'# Evaluate classifier predictions\nfrom sklearn.metrics import classification_report\ny_pred = model.predict(X_test)\nprint(classification_report(y_test, y_pred))\n\nprecision   recall   f1-score\n   0.91      0.89      0.90\n✓ Evaluation complete',
+'# Cross-validate the model\nfrom sklearn.model_selection import cross_val_score\nscores = cross_val_score(\n    model, X_train, y_train, cv=5,\n    scoring="f1_macro")\nprint(scores.mean().round(3))\n\n✓ Five folds evaluated',
+'# Search hyperparameters\nfrom sklearn.model_selection import RandomizedSearchCV\nsearch = RandomizedSearchCV(model,\n    {"randomforestclassifier__max_depth": [4, 8, 12]},\n    n_iter=3, cv=3, random_state=42)\nsearch.fit(X_train, y_train)\nprint(search.best_params_)\n✓ Search complete',
+'# Visualize feature relationships\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.heatmap(X.corr(numeric_only=True),\n    cmap="Greens", center=0)\nplt.savefig("correlations.png")\n\n✓ Correlation map saved',
+'# Cluster standardized observations\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.cluster import KMeans\nZ = StandardScaler().fit_transform(X.dropna())\nclusters = KMeans(n_clusters=4,\n    random_state=42, n_init=10).fit_predict(Z)\n\n✓ Four clusters assigned',
+'# Reduce dimensions with PCA\nfrom sklearn.decomposition import PCA\npca = PCA(n_components=2)\nembedding = pca.fit_transform(Z)\nprint(pca.explained_variance_ratio_)\n\n[0.48 0.23]\n✓ Two-dimensional projection ready',
+'# Train a neural network\nimport torch\nfor epoch in range(10):\n    optimizer.zero_grad()\n    loss = criterion(net(batch_x), batch_y)\n    loss.backward()\n    optimizer.step()\n✓ Training step complete',
+'# Save the trained pipeline\nimport joblib\njoblib.dump(model, "model.joblib")\nloaded = joblib.load("model.joblib")\npredictions = loaded.predict(X_test)\n\n✓ Pipeline saved and reloaded',
+'# Run data-quality checks\nassert not df.columns.duplicated().any()\nassert y.notna().all()\nassert len(X) == len(y)\n$ python -m pytest tests/\n\n12 passed in 0.58s\n✓ Checks complete'
+];
+function render(){page.classList.toggle('mp-paused',!state.moving);pause.textContent=state.moving?'Pause motion':'Play motion';pause.setAttribute('aria-pressed',String(!state.moving));}
+pause.addEventListener('click',()=>{state.moving=!state.moving;render()});render();
+new ResizeObserver(()=>{width=page.clientWidth;height=page.clientHeight;const d=Math.min(devicePixelRatio||1,2);canvas.width=width*d;canvas.height=height*d;ctx.setTransform(d,0,0,d,0,0)}).observe(page);
+function frame(now){const dt=last?Math.min((now-last)/1000,.05):0;last=now;if(state.moving&&page.getClientRects().length)time+=dt*state.speed;
+if(code){const cycle=Math.floor(time/8)%snippets.length;const progress=time%8;const text=snippets[cycle];const count=reduced?text.length:Math.min(text.length,Math.floor(progress*95));code.textContent=text.slice(0,count)+(count<text.length?'▌':'');code.scrollTop=code.scrollHeight;}
+if(width&&height&&page.getClientRects().length){ctx.clearRect(0,0,width,height);const breath=.72+.2*Math.sin(time*.43);const rgb=page.dataset.rgb;
+ctx.save();ctx.shadowBlur=0;
+for(let star=0;star<82;star++){
+const sx=Math.sin(star*127.1+19)*43758.5453;const sy=Math.sin(star*311.7+37)*19341.723;
+const x=((sx-Math.floor(sx))*width+time*(.14+star%3*.07))%width;
+const y=(sy-Math.floor(sy))*height;
+const quiet=Math.abs(x-width*.5)<width*.27&&y<height*.66?.28:1;
+const flicker=.65+.35*Math.sin(time*(.22+star%5*.035)+star*2.4);
+const bright=star%13===0;const radius=bright?1.25:.55+star%3*.16;
+ctx.fillStyle=`rgba(220,231,246,${(bright?.64:.32)*flicker*quiet})`;
+ctx.beginPath();ctx.arc(x,y,radius,0,Math.PI*2);ctx.fill();
+if(bright){ctx.strokeStyle=`rgba(210,226,246,${.17*flicker*quiet})`;ctx.lineWidth=.5;ctx.beginPath();ctx.moveTo(x-4,y);ctx.lineTo(x+4,y);ctx.moveTo(x,y-4);ctx.lineTo(x,y+4);ctx.stroke();}
+}
+ctx.restore();
+if(page.dataset.mode==='code-lines'){
+const fragments=['import pandas as pd','model.fit(X_train, y_train)','df.drop_duplicates()','loss.backward()','predict(X_test)','cross_val_score(model, X, y)','SELECT * FROM observations','np.mean(scores)','optimizer.step()','features.transform(X)','train_test_split(X, y)','plt.savefig("results.png")'];
+ctx.save();ctx.font='11px monospace';ctx.textBaseline='middle';
+for(let lane=0;lane<9;lane++){
+const base=height*(.13+lane*.095);const offset=Math.sin(time*.13)*9;
+const y=base+offset;const slope=-.14;
+const color=lane%3===0?page.dataset.secondary:rgb;
+const line=ctx.createLinearGradient(0,0,width,0);line.addColorStop(0,`rgba(${color},.16)`);line.addColorStop(.28,`rgba(${color},.08)`);line.addColorStop(.5,`rgba(${color},.025)`);line.addColorStop(.72,`rgba(${color},.08)`);line.addColorStop(1,`rgba(${color},.16)`);
+ctx.strokeStyle=line;ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(0,y+width*.5*slope);ctx.lineTo(width,y-width*.5*slope);ctx.stroke();
+for(let packet=0;packet<2;packet++){
+const track=width+300;const x=((time*(13+lane%3*4)+lane*133+packet*track/2)%track)-170;const py=y-(x-width*.5)*slope;
+const centerFade=Math.abs(x-width*.5)<width*.25&&py<height*.65?.17:1;
+ctx.save();ctx.translate(x,py);ctx.rotate(Math.atan(-slope));ctx.fillStyle=`rgba(${color},${.38*state.intensity*centerFade})`;ctx.fillText(fragments[(lane+packet*5)%fragments.length],0,-8);
+ctx.fillStyle=`rgba(${color},${.6*state.intensity*centerFade})`;ctx.fillRect(-8,-1,3,3);ctx.restore();
+}
+}ctx.restore();
+}else if(page.dataset.mode==='clouds'){
+for(let i=0;i<7;i++){const side=i%2;const cx=width*(side?.8:.18)+Math.sin(time*.12+i*2)*width*.13;const cy=height*(.68+.11*Math.sin(time*.1+i));const radius=width*(.28+.035*Math.sin(time*.17+i));const g=ctx.createRadialGradient(cx,cy,0,cx,cy,radius);const col=side?page.dataset.secondary:rgb;g.addColorStop(0,`rgba(${col},${(.13+.045*Math.sin(time*.35+i))*state.intensity})`);g.addColorStop(.4,`rgba(${col},${.065*state.intensity})`);g.addColorStop(1,`rgba(${col},0)`);ctx.fillStyle=g;ctx.fillRect(0,0,width,height)}
+}else if(page.dataset.mode==='rays'){
+ctx.save();ctx.globalCompositeOperation='screen';for(let i=0;i<10;i++){const side=i%2;const cx=width*(side?.87:.13);const angle=(side?-1:1)*(.28+Math.sin(time*.09+i*.35)*.14)+(i-4.5)*.09;ctx.save();ctx.translate(cx,height*1.15);ctx.rotate(angle);const g=ctx.createLinearGradient(0,0,0,-height*1.3);const col=side?page.dataset.secondary:rgb;g.addColorStop(0,`rgba(${col},${.15*breath*state.intensity})`);g.addColorStop(.4,`rgba(${col},${.07*breath*state.intensity})`);g.addColorStop(1,`rgba(${col},0)`);ctx.fillStyle=g;ctx.filter='blur(16px)';ctx.beginPath();ctx.moveTo(-7,0);ctx.lineTo(-width*.1,-height*1.3);ctx.lineTo(width*.1,-height*1.3);ctx.lineTo(7,0);ctx.fill();ctx.restore()}ctx.restore();
+}else{
+for(let layer=0;layer<30;layer++){const spread=(layer-15)*1.35;ctx.beginPath();for(let x=-20;x<=width+20;x+=8){const u=x/width;const bowl=height*(.43+.42*Math.sin(Math.PI*Math.max(0,Math.min(1,u))));const flow=Math.sin(u*6+time*.23+layer*.09)*height*.022+Math.sin(u*12-time*.13)*height*.009;const y=bowl+flow+spread; x===-20?ctx.moveTo(x,y):ctx.lineTo(x,y)}const gradient=ctx.createLinearGradient(0,0,width,0);gradient.addColorStop(0,`rgba(${rgb},${.13*breath*state.intensity})`);gradient.addColorStop(.37,`rgba(${rgb},${.17*breath*state.intensity})`);gradient.addColorStop(.62,`rgba(${page.dataset.secondary},${.09*breath*state.intensity})`);gradient.addColorStop(1,`rgba(${page.dataset.secondary},${.25*breath*state.intensity})`);ctx.strokeStyle=gradient;ctx.lineWidth=layer===15?1.8:.8;ctx.shadowBlur=layer===15?18:7;ctx.shadowColor=page.dataset.accent;ctx.stroke()}
+}
+ctx.shadowBlur=0;for(let i=0;i<105;i++){const seed=Math.sin(i*127.1+3)*43758.54;const ux=seed-Math.floor(seed);const sy=Math.sin(i*73.8+9)*15973.3;const uy=sy-Math.floor(sy);const px=(ux*width+Math.sin(time*.07+i)*9+width)%width;const py=height*(.55+uy*.4)+Math.sin(time*.1+i)*5;ctx.fillStyle=ux<.5?`rgba(${rgb},${.06+uy*.13})`:`rgba(${page.dataset.secondary},${.04+uy*.1})`;ctx.fillRect(px,py,1,1)}
+}requestAnimationFrame(frame)}requestAnimationFrame(frame);
+if(globalThis.Tweak){const tweak=new Tweak({container:page,onChange:render});tweak.addToggle(state,'moving',{label:'Motion'});tweak.addSlider(state,'speed',{label:'Motion speed',min:.3,max:2,step:.1});tweak.addSlider(state,'intensity',{label:'Light intensity',min:.3,max:1.5,step:.1});}
+});
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
