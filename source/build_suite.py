@@ -6,7 +6,7 @@ layout = (folder / 'suite-layout.html').read_text(encoding='utf-8')
 navigation = '<nav aria-label="Website navigation"><a href="#home" data-page="home">HOME</a><a href="#portfolio" data-page="portfolio">PORTFOLIO</a><a href="#experience" data-page="experience">EXPERIENCE</a><a href="#about" data-page="about">ABOUT</a></nav>'
 for page, filename in [('home', 'homepage-source.html'), ('portfolio', 'portfolio-source.html'), ('experience', 'experience-source.html'), ('about', 'about-source.html')]:
     content = (folder / filename).read_text(encoding='utf-8-sig')
-    content = re.sub(r'<nav.*?</nav>', lambda _: navigation, content, flags=re.S)
+    content = re.sub(r'<nav.*?</nav>', lambda _: '', content, flags=re.S)
     if page == 'home':
         content = content.replace('<button type="button" class="mp-primary">View portfolio</button>', '<button type="button" class="mp-primary" data-page="portfolio">View portfolio</button>')
         content = content.replace('<button type="button">View resume</button>', '<button type="button" data-page="experience">View resume</button>')
@@ -20,3 +20,6 @@ for script in re.findall(r'<script>(.*?)</script>', layout, re.S):
 (folder / 'suite-check.js').write_text('\n'.join(re.findall(r'<script>(.*?)</script>', layout, re.S)), encoding='utf-8')
 print('Suite assembled: four pages with shared navigation.')
 
+
+document = "<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>tserdioukov</title><meta name='description' content='Thomas Serdioukov — AI and data platform engineering, projects, and experience.'></head><body>" + layout + "<script src='https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js'></script><script>if(window.lucide)lucide.createIcons();</script></body></html>"
+(folder.parent / 'index.html').write_text(document, encoding='utf-8')

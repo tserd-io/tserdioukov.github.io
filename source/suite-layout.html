@@ -1,26 +1,30 @@
 <div id="portfolio-suite" aria-label="Thomas Serdioukov website">
-<section data-suite-page="home">__HOME__</section>
-<section data-suite-page="portfolio" hidden>__PORTFOLIO__</section>
-<section data-suite-page="experience" hidden>__EXPERIENCE__</section>
-<section data-suite-page="about" hidden>__ABOUT__</section>
+<nav class="suite-nav" aria-label="Website navigation"><a href="#home" data-page="home">HOME</a><a href="#portfolio" data-page="portfolio">PORTFOLIO</a><a href="#experience" data-page="experience">EXPERIENCE</a><a href="#about" data-page="about">ABOUT</a></nav>
+<section id="home" data-suite-page="home">__HOME__</section>
+<section id="portfolio" data-suite-page="portfolio">__PORTFOLIO__</section>
+<section id="experience" data-suite-page="experience">__EXPERIENCE__</section>
+<section id="about" data-suite-page="about">__ABOUT__</section>
 </div>
 <style>
-#portfolio-suite [hidden]{display:none!important}
-#portfolio-suite nav a{color:#a8b8ca;text-decoration:none;padding:5px 0}
-#portfolio-suite nav a[aria-current="page"]{color:#eef1f5}
-#portfolio-suite nav a:hover{color:#91d59c}
+html{scroll-behavior:smooth}body{margin:0;background:#090f19}
+#portfolio-suite{background:#090f19}
+#portfolio-suite .suite-nav{position:sticky;top:0;z-index:100;display:flex;justify-content:center;flex-wrap:wrap;gap:28px;padding:20px 16px;background:rgba(9,15,25,.95);backdrop-filter:blur(12px);font:12px Arial,Helvetica,sans-serif;border-bottom:1px solid #1b2b40}
+#portfolio-suite .suite-nav a{color:#a8b8ca;text-decoration:none;padding:5px 0}
+#portfolio-suite .suite-nav a[aria-current="location"]{color:#eef1f5}
+#portfolio-suite .suite-nav a:hover{color:#91d59c}
+#portfolio-suite [data-suite-page]{scroll-margin-top:75px}
 #portfolio-suite .mp-links a{color:inherit;text-decoration:none}
 #portfolio-suite .mp-links a:hover{text-decoration:underline;text-underline-offset:4px}
 #portfolio-suite .mp-page{min-height:680px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 <script>
 (()=>{
 const suite=document.getElementById('portfolio-suite');
 const pages=Array.from(suite.querySelectorAll('[data-suite-page]'));
-function show(name){if(!pages.some(page=>page.dataset.suitePage===name))return;pages.forEach(page=>{page.hidden=page.dataset.suitePage!==name});suite.querySelectorAll('nav [data-page]').forEach(link=>{if(link.dataset.page===name)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')});}
-suite.addEventListener('click',event=>{const link=event.target.closest('[data-page]');if(!link||!suite.contains(link))return;event.preventDefault();show(link.dataset.page);});
-show('home');
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+suite.addEventListener('click',event=>{const link=event.target.closest('[data-page]');if(!link||!suite.contains(link))return;const target=document.getElementById(link.dataset.page);if(!target)return;event.preventDefault();target.scrollIntoView({behavior:reduced?'instant':'smooth',block:'start'});history.replaceState(null,'','#'+link.dataset.page);});
+function active(name){suite.querySelectorAll('.suite-nav a').forEach(link=>{if(link.dataset.page===name)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')});}
+const observer=new IntersectionObserver(entries=>{const visible=entries.filter(entry=>entry.isIntersecting);if(visible.length)active(visible[0].target.dataset.suitePage)},{rootMargin:'-15% 0px -65% 0px',threshold:0});pages.forEach(page=>observer.observe(page));active('home');
 })();
 </script>
-
-
